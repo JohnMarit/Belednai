@@ -1,0 +1,105 @@
+<nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
+  <div class="scrollbar-inner">
+    <!-- Brand -->
+    <div class="sidenav-header  align-items-center">
+      <a class="navbar-brand" href="/">
+        <img src="/static/assets/img/brand/logo.png" class="navbar-brand-img" alt="Argon Design - Jinja Template Logo.">{% block title %} Belednai {% endblock %}
+      </a>
+    </div>
+    <div class="navbar-inner">
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+        <!-- Nav items -->
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link {% if 'index' in segment %} active {% endif %}" href="/">
+              <i class="ni ni-collection text-orange"></i>
+              <span class="nav-link-text">USSD Short-codes</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link {% if 'tables' in segment %} active {% endif %}" href="/tables.html">
+              <i class="ni ni-credit-card text-default"></i>
+              <span class="nav-link-text">Payment & Travel</span>
+            </a>
+          </li>
+
+ 
+
+
+          <li class="nav-item">
+            <a class="nav-link {% if 'accomodation' in segment %} active {% endif %}" href="/accomodation.html">
+              <i class="ni ni-building text-default"></i>
+              <span class="nav-link-text">Accomodation</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link {% if 'water' in segment %} active {% endif %}" href="/water.html">
+              <i class="ni ni-delivery-fast text-orange"></i>
+              <span class="nav-link-text">Water Suppliers</span>
+            </a>
+          </li>
+
+                   
+
+          <li class="nav-item">
+            <a class="nav-link {% if 'icons' in segment %} active {% endif %}" href="/icons.html">
+              <i class="ni ni-chart-pie-35 text-primary"></i>
+              <span class="nav-link-text">Demographics</span>
+            </a>
+          </li>
+
+         
+         
+          <li class="nav-item">
+            <a class="nav-link {% if 'profile' in segment %} active {% endif %}" href="/profile.html">
+              <i class="ni ni-single-02 text-yellow"></i>
+              <span class="nav-link-text">Profile</span>
+            </a>
+          </li>
+
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout' %}">
+              <i class="ni ni-user-run text-red"></i>
+              <span class="nav-link-text">Logout</span>
+            </a>
+          </li>            
+        </ul>
+        <!-- Divider -->
+        <hr class="my-3">
+        <!-- Heading -->
+        <h6 class="navbar-heading p-0 text-muted">
+          <span class="docs-normal">Resources</span>
+        </h6>
+        <!-- Navigation -->
+        <ul class="navbar-nav mb-md-3">
+
+          <li class="nav-item">
+            <a class="nav-link" 
+               target="_blank" 
+               href="https://appseed.us/admin-dashboards/django-dashboard-argon">
+              <i class="ni ni-archive-2"></i>
+              <span class="nav-link-text">Product Page</span>
+            </a>
+          </li>
+
+         
+
+          <li class="nav-item">
+            <a class="nav-link active active-pro" 
+               target="_blank" 
+               href="">
+              <i class="ni ni-send text-dark"></i>
+              <span class="nav-link-text">In Team</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
