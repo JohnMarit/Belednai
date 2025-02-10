@@ -119,6 +119,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(CORE_DIR, 'apps/static'),
 )
+DEBUG = False, ALLOWED_HOSTS
 
 
 #############################################################
