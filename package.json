@@ -6,7 +6,7 @@
     "scripts": {},
     "repository": {
         "type": "git",
-        "url": "https://github.com/creativetimofficial/argon-dashboard-django"
+        "url": "git+https://github.com/creativetimofficial/argon-dashboard-django.git"
     },
     "bugs": {
         "url": "https://github.com/creativetimofficial/argon-dashboard-django/issues",
@@ -16,6 +16,12 @@
     "engines": {
         "node": ">=10.0.0"
     },
-    "dependencies": {},
-    "devDependencies": {}
+    "main": "index.js",
+    "keywords": [],
+    "license": "ISC",
+    "type": "commonjs",
+    "homepage": "https://github.com/creativetimofficial/argon-dashboard-django#readme",
+    "dependencies": {
+        "bootstrap": "^5.3.3"
+    }
 }

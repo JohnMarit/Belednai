@@ -1,0 +1,986 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Tables {% endblock title %}
+
+{% block content %}
+
+  <div class="header bg-primary pb-6">
+    <div class="container-fluid">
+      <div class="header-body">
+        <div class="row align-items-center py-4">
+          <div class="col-lg-6 col-7">
+            <h6 class="h2 text-white d-inline-block mb-0">Payment & Travel</h6>
+            <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+              <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                <li class="breadcrumb-item"><a href="#">Payment & Travel</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Banks & Flights</li>
+              </ol>
+            </nav>
+          </div>
+          <div class="col-lg-6 col-5 text-right">
+            <a href="#" class="btn btn-sm btn-neutral">New</a>
+            <a href="#" class="btn btn-sm btn-neutral">Filters</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Page content -->
+  <div class="container-fluid mt--6">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <!-- Card header -->
+          <div class="card-header border-0">
+            <h3 class="mb-0">Banks</h3>
+          </div>
+          <!-- Light table -->
+          <div class="table-responsive">
+            <table class="table align-items-center table-flush">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col" class="sort" data-sort="name">Name</th>
+                  <th scope="col" class="sort" data-sort="budget">Open</th>
+                  <th scope="col" class="sort" data-sort="status">Customer-Care Number</th>
+                  <th scope="col">Supported Services</th>
+                  <th scope="col" class="sort" data-sort="completion">Popularity</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody class="list">
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" class="avatar rounded-circle mr-3">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/afri.png">
+                      </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">Afriland</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="budget">
+                    8a.m - 4p.m
+                  </td>
+                  <td>
+                    
+                    <button type="button" class="btn-icon-clipboard" data-clipboard-text="0921111111" title="Copy to clipboard">
+                      <div>
+                        <i class="ni "></i>
+                        <span>0921111111</span>
+                      </div>
+                    </button>
+                  </td>
+                  <td>
+                    <div class="avatar-group">
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Visa Card">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/visa.jpeg">
+                      </a>
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Master Card">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/master.png">
+                      </a>
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="MoMo Pay">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/mom.png">
+                      </a>
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Mgurush">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/mgur.png">
+                      </a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="completion mr-2">60%</span>
+                      <div>
+                        <div class="progress">
+                          <div class="progress-bar bg-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" class="avatar rounded-circle mr-3">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/coo.jpg">
+                      </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">Co-operative</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="budget">
+                    8a.m - 4p.m
+                  </td>
+                  <td>
+                    <button type="button" class="btn-icon-clipboard" data-clipboard-text="0920000000" title="Copy to clipboard">
+                      <div>
+                        <i class="ni "></i>
+                        <span>0920000000</span>
+                      </div>
+                    </button>
+                  </td>
+
+                  <td>
+                    <div class="avatar-group">
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Visa Card">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/visa.jpeg">
+                      </a>
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Master Card">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/master.png">
+                      </a>
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="MoMo Pay">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/mom.png">
+                      </a>
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Mgurush">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/mgur.png">
+                      </a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="completion mr-2">51%</span>
+                      <div>
+                        <div class="progress">
+                          <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="51" aria-valuemin="0" aria-valuemax="100" style="width: 51%;"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+
+
+                  <tr>
+                    <th scope="row">
+                      <div class="media align-items-center">
+                        <a href="#" class="avatar rounded-circle mr-3">
+                          <img alt="Image placeholder" src="/static/assets/img/theme/eco.png">
+                        </a>
+                        <div class="media-body">
+                          <span class="name mb-0 text-sm">Ecobank</span>
+                        </div>
+                      </div>
+                    </th>
+                    <td class="budget">
+                      8a.m - 4p.m
+                    </td>
+                    <td>
+                      <button type="button" class="btn-icon-clipboard" data-clipboard-text="0920000000" title="Copy to clipboard">
+                        <div>
+                          <i class="ni "></i>
+                          <span>0920000000</span>
+                        </div>
+                      </button>
+                    </td>
+  
+                    <td>
+                      <div class="avatar-group">
+                        <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Visa Card">
+                          <img alt="Image placeholder" src="/static/assets/img/theme/visa.jpeg">
+                        </a>
+                        <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Master Card">
+                          <img alt="Image placeholder" src="/static/assets/img/theme/master.png">
+                        </a>
+                        <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="MoMo Pay">
+                          <img alt="Image placeholder" src="/static/assets/img/theme/mom.png">
+                        </a>
+                        <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Mgurush">
+                          <img alt="Image placeholder" src="/static/assets/img/theme/mgur.png">
+                        </a>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <span class="completion mr-2">62%</span>
+                        <div>
+                          <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100" style="width: 62%;"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-right">
+                      <div class="dropdown">
+                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fas fa-ellipsis-v"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" class="avatar rounded-circle mr-3">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/kcb.jpg">
+                      </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">KCB Bank</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="budget">
+                    8a.m - 4p.m
+                  </td>
+                  <td>
+                    <button type="button" class="btn-icon-clipboard" data-clipboard-text="0920000000" title="Copy to clipboard">
+                      <div>
+                        <i class="ni "></i>
+                        <span>0920000000</span>
+                      </div>
+                    </button>
+                  </td>
+
+                  <td>
+                    <div class="avatar-group">
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Visa Card">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/visa.jpeg">
+                      </a>
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Master Card">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/master.png">
+                      </a>
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="MoMo Pay">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/mom.png">
+                      </a>
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Mgurush">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/mgur.png">
+                      </a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="completion mr-2">53%</span>
+                      <div>
+                        <div class="progress">
+                          <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="53" aria-valuemin="0" aria-valuemax="100" style="width: 53%;"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" class="avatar rounded-circle mr-3">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/kush.png">
+                      </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">Kush Bank</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="budget">
+                    8a.m - 4p.m
+                  </td>
+                  <td>
+                    <button type="button" class="btn-icon-clipboard" data-clipboard-text="0920000000" title="Copy to clipboard">
+                      <div>
+                        <i class="ni "></i>
+                        <span>0920000000</span>
+                      </div>
+                    </button>
+                  </td>
+
+                  <td>
+                    <div class="avatar-group">
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Visa Card">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/visa.jpeg">
+                      </a>
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Master Card">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/master.png">
+                      </a>
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="MoMo Pay">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/mom.png">
+                      </a>
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Mgurush">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/mgur.png">
+                      </a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="completion mr-2">65%</span>
+                      <div>
+                        <div class="progress">
+                          <div class="progress-bar bg-info" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%;"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Card footer -->
+          <div class="card-footer py-4">
+            <nav aria-label="...">
+              <ul class="pagination justify-content-end mb-0">
+                <li class="page-item disabled">
+                  <a class="page-link" href="#" tabindex="-1">
+                    <i class="fas fa-angle-left"></i>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                </li>
+                <li class="page-item active">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">
+                    <i class="fas fa-angle-right"></i>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    
+
+    <!-- Dark table -->
+    <div class="row">
+      <div class="col">
+        <div class="card bg-default shadow">
+          <div class="card-header bg-transparent border-0">
+            <h3 class="text-white mb-0">Digital Payments</h3>
+          </div>
+          <div class="table-responsive">
+            <table class="table align-items-center table-dark table-flush">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col" class="sort" data-sort="name">Name</th>
+                  <th scope="col" class="sort" data-sort="budget">Transaction Limit</th>
+                  <th scope="col" class="sort" data-sort="status">Availability</th>
+                  <th scope="col">Supported Banks</th>
+                  <th scope="col" class="sort" data-sort="completion">Popularity</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody class="list">
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" class="avatar rounded-circle mr-3">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/mom.png">
+                      </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">MTN MoMo</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="budget">
+                    100 SSP - 5,000,000 SSP
+                  </td>
+                  <td>
+                    <span class="badge badge-dot mr-4">
+                      <i class="bg-success"></i>
+                      <span class="status">24/7 hrs</span>
+                    </span>
+                  </td>
+                  <td>
+                    <div class="avatar-group">
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Afri-land First Bank">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/afri.png">
+                      </a>
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Ecobank">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/eco.png">
+                      </a>
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Co-operative Bank">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/coo.jpg">
+                      </a>
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Kush Bank">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/kush.png">
+                      </a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="completion mr-2">60%</span>
+                      <div>
+                        <div class="progress">
+                          <div class="progress-bar bg-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" class="avatar rounded-circle mr-3">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/mgur.png">
+                      </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">M-Gurush</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="budget">
+                    100 SSP - 5,000,000 SSP
+                  </td>
+                  <td>
+                    <span class="badge badge-dot mr-4">
+                      <i class="bg-success"></i>
+                      <span class="status">24/7 hrs</span>
+                    </span>
+                  </td>
+                  <td>
+                    <div class="avatar-group">
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Afri-land First Bank">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/afri.png">
+                      </a>
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Ecobank">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/eco.png">
+                      </a>
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Co-operative Bank">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/coo.jpg">
+                      </a>
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Kush Bank">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/kush.png">
+                      </a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="completion mr-2">25%</span>
+                      <div>
+                        <div class="progress">
+                          <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="25" style="width: 25%;"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" class="avatar rounded-circle mr-3">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/digi.png">
+                      </a>
+                      <div class="media-body">
+                        <span class="name mb-0 text-sm">Digicash</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="budget">
+                    100 SSP - 5,000,000 SSP
+                  </td>
+                  <td>
+                    <span class="badge badge-dot mr-4">
+                      <i class="bg-success"></i>
+                      <span class="status">24/7 hrs</span>
+                    </span>
+                  </td>
+                  <td>
+                    <div class="avatar-group">
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Afri-land First Bank">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/afri.png">
+                      </a>
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Ecobank">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/eco.png">
+                      </a>
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Co-operative Bank">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/coo.jpg">
+                      </a>
+                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Kush Bank">
+                        <img alt="Image placeholder" src="/static/assets/img/theme/kush.png">
+                      </a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="completion mr-2">15%</span>
+                      <div>
+                        <div class="progress">
+                          <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="15" style="width: 15%;"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <!-- Card header -->
+      <div class="card-header border-0">
+        <h3 class="mb-0">Fligts Booking & Special Hire Cars</h3>
+      </div>
+      <!-- Light table -->
+      <div class="table-responsive">
+        <table class="table align-items-center table-flush">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col" class="sort" data-sort="name">Name</th>
+              <th scope="col" class="sort" data-sort="budget">Open</th>
+              <th scope="col" class="sort" data-sort="status">Customer-Care Number</th>
+              <th scope="col">Airliners</th>
+              <th scope="col" class="sort" data-sort="completion">Service Delivery</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody class="list">
+            <tr>
+              <th scope="row">
+                <div class="media align-items-center">
+                  <a href="#" class="avatar rounded-circle mr-3">
+                    <img alt="Image placeholder" src="/static/assets/img/theme/rub.jpeg">
+                  </a>
+                  <div class="media-body">
+                    <span class="name mb-0 text-sm">Rubefly Air Services</span>
+                  </div>
+                </div>
+              </th>
+              <td class="budget">
+                8a.m - 4p.m
+              </td>
+              <td>
+                <button type="button" class="btn-icon-clipboard" data-clipboard-text="0920000000" title="Copy to clipboard" >
+                  <div>
+                    <i class="ni "></i>
+                    <span>0920000000</span>
+                  </div>
+                </button>
+              </td>
+              <td>
+                <div class="avatar-group">
+                  <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Kenya Airways">
+                    <img alt="Image placeholder" src="/static/assets/img/theme/kqa.jpeg">
+                  </a>
+                  <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Ethiopian Airlines">
+                    <img alt="Image placeholder" src="/static/assets/img/theme/eth.jpg">
+                  </a>
+                  <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="RwandAir">
+                    <img alt="Image placeholder" src="/static/assets/img/theme/rwan.jpeg">
+                  </a>
+                  <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Uganda Airlines">
+                    <img alt="Image placeholder" src="/static/assets/img/theme/uga.jpeg">
+                  </a>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex align-items-center">
+                  <span class="completion mr-2">60%</span>
+                  <div>
+                    <div class="progress">
+                      <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td class="text-right">
+                <div class="dropdown">
+                  <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <div class="media align-items-center">
+                  <a href="#" class="avatar rounded-circle mr-3">
+                    <img alt="Image placeholder" src="/static/assets/img/theme/rich.png">
+                  </a>
+                  <div class="media-body">
+                    <span class="name mb-0 text-sm">Richfield Aviation Services</span>
+                  </div>
+                </div>
+              </th>
+              <td class="budget">
+                8a.m - 4p.m
+              </td>
+              <td>
+                <button type="button" class="btn-icon-clipboard" data-clipboard-text="0920000000" title="Copy to clipboard">
+                  <div>
+                    <i class="ni "></i>
+                    <span>0925792222</span>
+                  </div>
+                </button>
+              </td>
+
+              <td>
+                <div class="avatar-group">
+                  <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Kenya Airways">
+                    <img alt="Image placeholder" src="/static/assets/img/theme/kqa.jpeg">
+                  </a>
+                  <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Ethiopian Airlines">
+                    <img alt="Image placeholder" src="/static/assets/img/theme/eth.jpg">
+                  </a>
+                  <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="RwandAir">
+                    <img alt="Image placeholder" src="/static/assets/img/theme/rwan.jpeg">
+                  </a>
+                  <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Uganda Airlines">
+                    <img alt="Image placeholder" src="/static/assets/img/theme/uga.jpeg">
+                  </a>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex align-items-center">
+                  <span class="completion mr-2">100%</span>
+                  <div>
+                    <div class="progress">
+                      <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td class="text-right">
+                <div class="dropdown">
+                  <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <div class="media align-items-center">
+                  <a href="#" class="avatar rounded-circle mr-3">
+                    <img alt="Image placeholder" src="/static/assets/img/theme/link.jpeg">
+                  </a>
+                  <div class="media-body">
+                    <span class="name mb-0 text-sm">DoveLink Travel</span>
+                  </div>
+                </div>
+              </th>
+              <td class="budget">
+                8a.m - 4p.m
+              </td>
+              <td>
+                <button type="button" class="btn-icon-clipboard" data-clipboard-text="0920000000" title="Copy to clipboard">
+                  <div>
+                    <i class="ni "></i>
+                    <span>0921514200</span>
+                  </div>
+                </button>
+              </td>
+
+              <td>
+                <div class="avatar-group">
+                  <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Kenya Airways">
+                    <img alt="Image placeholder" src="/static/assets/img/theme/kqa.jpeg">
+                  </a>
+                  <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Ethiopian Airlines">
+                    <img alt="Image placeholder" src="/static/assets/img/theme/eth.jpg">
+                  </a>
+                  <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="RwandAir">
+                    <img alt="Image placeholder" src="/static/assets/img/theme/rwan.jpeg">
+                  </a>
+                  <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Uganda Airlines">
+                    <img alt="Image placeholder" src="/static/assets/img/theme/uga.jpeg">
+                  </a>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex align-items-center">
+                  <span class="completion mr-2">72%</span>
+                  <div>
+                    <div class="progress">
+                      <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="width: 72%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td class="text-right">
+                <div class="dropdown">
+                  <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <div class="media align-items-center">
+                  <a href="#" class="avatar rounded-circle mr-3">
+                    <img alt="Image placeholder" src="/static/assets/img/theme/ana.png">
+                  </a>
+                  <div class="media-body">
+                    <span class="name mb-0 text-sm">Shilu Ana Taxi Services</span>
+                  </div>
+                </div>
+              </th>
+              <td class="budget">
+                8a.m - 4p.m
+              </td>
+              <td>
+                <button type="button" class="btn-icon-clipboard" data-clipboard-text="0920000000" title="Copy to clipboard">
+                  <div>
+                    <i class="ni "></i>
+                    <span>0920000000</span>
+                  </div>
+                </button>
+              </td>
+
+              <td>
+                <div class="avatar-group">
+                  <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Kenya Airways">
+                    <img alt="Image placeholder" src="/static/assets/img/theme/kqa.jpeg">
+                  </a>
+                  <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Ethiopian Airlines">
+                    <img alt="Image placeholder" src="/static/assets/img/theme/eth.jpg">
+                  </a>
+                  <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="RwandAir">
+                    <img alt="Image placeholder" src="/static/assets/img/theme/rwan.jpeg">
+                  </a>
+                  <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Uganda Airlines">
+                    <img alt="Image placeholder" src="/static/assets/img/theme/uga.jpeg">
+                  </a>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex align-items-center">
+                  <span class="completion mr-2">90%</span>
+                  <div>
+                    <div class="progress">
+                      <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td class="text-right">
+                <div class="dropdown">
+                  <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <div class="media align-items-center">
+                  <a href="#" class="avatar rounded-circle mr-3">
+                    <img alt="Image placeholder" src="/static/assets/img/theme/raba.jpeg">
+                  </a>
+                  <div class="media-body">
+                    <span class="name mb-0 text-sm">Raba Taxi</span>
+                  </div>
+                </div>
+              </th>
+              <td class="budget">
+                8a.m - 4p.m
+              </td>
+              <td>
+                <button type="button" class="btn-icon-clipboard" data-clipboard-text="0920000000" title="Copy to clipboard">
+                  <div>
+                    <i class="ni "></i>
+                    <span>0920000000</span>
+                  </div>
+                </button>
+              </td>
+
+              <td>
+                <div class="avatar-group">
+                  <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Kenya Airways">
+                    <img alt="Image placeholder" src="/static/assets/img/theme/kqa.jpeg">
+                  </a>
+                  <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Ethiopian Airlines">
+                    <img alt="Image placeholder" src="/static/assets/img/theme/eth.jpg">
+                  </a>
+                  <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="RwandAir">
+                    <img alt="Image placeholder" src="/static/assets/img/theme/rwan.jpeg">
+                  </a>
+                  <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Uganda Airlines">
+                    <img alt="Image placeholder" src="/static/assets/img/theme/uga.jpeg">
+                  </a>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex align-items-center">
+                  <span class="completion mr-2">100%</span>
+                  <div>
+                    <div class="progress">
+                      <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td class="text-right">
+                <div class="dropdown">
+                  <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Card footer -->
+      <div class="card-footer py-4">
+        <nav aria-label="...">
+          <ul class="pagination justify-content-end mb-0">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1">
+                <i class="fas fa-angle-left"></i>
+                <span class="sr-only">Previous</span>
+              </a>
+            </li>
+            <li class="page-item active">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">
+                <i class="fas fa-angle-right"></i>
+                <span class="sr-only">Next</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+
+  {% include "includes/footer.html" %}
+
+{% endblock content %}
+</div>
+
+
+
+   
+
+  </div>
+  
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}{% endblock javascripts %}
