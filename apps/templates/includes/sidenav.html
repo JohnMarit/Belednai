@@ -64,11 +64,14 @@
 
 
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'logout' %}">
+            <form id="logout-form" action="{% url 'logout' %}" method="POST" style="display: none;">
+              {% csrf_token %}
+            </form>
+            <a class="nav-link" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
               <i class="ni ni-user-run text-red"></i>
               <span class="nav-link-text">Logout</span>
             </a>
-          </li>            
+          </li>           
         </ul>
         <!-- Divider -->
         <hr class="my-3">
