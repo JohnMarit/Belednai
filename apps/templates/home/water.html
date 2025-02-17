@@ -8,14 +8,14 @@
 {% block content %}
 
     <!-- Header -->
-    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+   <!-- <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
       <div class="container-fluid">
-        <div class="header-body">
+        <div class="header-body">-->
           <!-- Card stats -->
           
-        </div>
+       <!-- </div>
       </div>
-    </div>
+    </div>-->
 
     <div class="container-fluid mt--7">
 
@@ -23,6 +23,7 @@
         <div class="col">
           <div class="card shadow">
             <div class="card-header bg-transparent">
+              <input type="text" id="search-input" placeholder="Search..." class="form-control mt-3"><br><br><br>
               <h3 class="mb-0">Gumbo - Sharikat Suppliers</h3>
             </div>
             <div class="card-body">
@@ -1717,5 +1718,25 @@
 {% block javascripts %}
 
 <script src="/static/assets/vendor/clipboard/dist/clipboard.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var clipboard = new ClipboardJS('.btn-icon-clipboard');
+
+    document.getElementById('search-input').addEventListener('input', function() {
+      var query = this.value.toLowerCase();
+      var buttons = document.querySelectorAll('.btn-icon-clipboard');
+
+      buttons.forEach(function(button) {
+        var text = button.querySelector('div').innerText.toLowerCase();
+        if (text.includes(query)) {
+          button.parentElement.style.display = '';
+        } else {
+          button.parentElement.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
 
 {% endblock javascripts %}
