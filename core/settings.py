@@ -15,10 +15,17 @@ CORE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config('SECRET_KEY', default='S#perS3crEt_1122')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=True, cast=bool)
+DEBUG = False  # Set to True only for debugging
 
 # load production server from .env
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', config('SERVER', default='127.0.0.1')]
+ALLOWED_HOSTS = ['https://belednai.vercel.app/', 'belednai.com']
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://belednai.vercel.app/',
+    'https://belednai.com'
+    'http://127.0.0.1:8000/'
+]
+
 
 # Application definition
 
@@ -125,3 +132,5 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 #############################################################
 #############################################################
+
+
