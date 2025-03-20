@@ -7,6 +7,8 @@ import os
 from decouple import config
 from unipath import Path
 
+
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = Path(__file__).parent
 CORE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -83,6 +85,31 @@ DATABASES = {
         'NAME': 'db.sqlite3',
     }
 }
+
+
+import dj_database_url
+from decouple import config
+
+# Local database configuration
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST', default='localhost'),
+        'PORT': config('DB_PORT', default='3306'),
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
+    }
+}
+
+# Override with Heroku database configuration
+if 'JAWSDB_URL' in os.environ:
+    DATABASES['default'] = dj_database_url.config(default=os.getenv('JAWSDB_URL'))
+
+    
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
