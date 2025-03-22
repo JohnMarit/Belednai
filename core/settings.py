@@ -187,8 +187,8 @@ SOCIALACCOUNT_PROVIDERS = {
             'access_type': 'online',
         },
         'APP': {
-            'client_id': 'CLIENT_ID',
-            'secret': 'SECRET',
+            'client_id': 'GOOGLE_CLIENT_ID',
+            'secret': 'GOOGLE_CLIENT_SECRET',
             'key': ''
         }
     }
