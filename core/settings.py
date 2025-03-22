@@ -175,8 +175,14 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
-LOGIN_REDIRECT_URL = '/'  # Redirect after login
-LOGOUT_REDIRECT_URL = '/'  # Redirect after logout
+
+
+LOGIN_REDIRECT_URL = '/'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_LOGIN_METHODS = {'email', 'username'}
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+SOCIALACCOUNT_QUERY_EMAIL = True
+
 
 
 
@@ -194,5 +200,3 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
-print("GOOGLE_CLIENT_ID:", config('GOOGLE_CLIENT_ID', default=None))
-print("GOOGLE_CLIENT_SECRET:", config('GOOGLE_CLIENT_SECRET', default=None))
