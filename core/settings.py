@@ -193,3 +193,6 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     }
 }
+
+print("GOOGLE_CLIENT_ID:", config('GOOGLE_CLIENT_ID', default=None))
+print("GOOGLE_CLIENT_SECRET:", config('GOOGLE_CLIENT_SECRET', default=None))
