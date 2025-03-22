@@ -1,0 +1,991 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Icons {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+      <div class="container-fluid">
+        <div class="header-body">
+          <div class="col-lg-6 col-7">
+            <h6 class="h2 text-white d-inline-block mb-0">SHORT USSD CODES</h6>
+            <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+              <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                <li class="breadcrumb-item"><a href="#">Shorts Codes</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Telecoms</li>
+              </ol>
+            </nav>
+          </div>
+          <!-- Card stats -->
+         <!--<div class="row">
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">MTN Subs</h5>
+                      <span class="h2 font-weight-bold mb-0">350,897</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                        <i class="fas fa-users"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0 text-muted text-sm">
+                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
+                    <span class="text-nowrap">Since last month</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Zain Subs</h5>
+                      <span class="h2 font-weight-bold mb-0">25,356</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-gradient-primary text-white rounded-circle shadow">
+                        <i class="fas fa-users"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0 text-muted text-sm">
+                    <span class="text-danger mr-2"><i class="fas fa-arrow-down"></i> 3.48%</span>
+                    <span class="text-nowrap">Since last week</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Digitel Subs</h5>
+                      <span class="h2 font-weight-bold mb-0">19,240</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-green text-white rounded-circle shadow">
+                        <i class="fas fa-users"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0 text-muted text-sm">
+                    <span class="text-warning mr-2"><i class="fas fa-arrow-down"></i> 1.10%</span>
+                    <span class="text-nowrap">Since yesterday</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Total Subs</h5>
+                      <span class="h2 font-weight-bold mb-0">494,650</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                        <i class="fas fa-users"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0 text-muted text-sm">
+                    <span class="text-success mr-2"><i class="fas fa-arrow-up"></i> 12%</span>
+                    <span class="text-nowrap">Since last month</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>-->
+        </div>
+      </div>
+    </div> 
+
+    <div class="container-fluid mt--7">
+
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+              <input type="text" id="search-input" placeholder="Search..." class="form-control mt-3"><br><br><br>
+              <h3 class="mb-0">MTN USSD Short-codes</h3><br>
+              Click to Copy the Short-code & paste it in Dial pad.
+              
+            </div>
+            <div class="card-body">
+              <div class="row icon-examples">
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*131#" title="Copy to clipboard">
+                    <div>Airtime Balance
+                      <i class="ni "></i>
+                      <span>*131#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100#" title="Copy to clipboard">
+                    <div>MTN Store
+                      <i class="ni "></i>
+                      <span>*100#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*200#" title="Copy to clipboard">
+                    <div>MoMo Menu
+                      <i class="ni "></i>
+                      <span>*200#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*0#" title="Copy to clipboard">
+                    <div>MTN Hagi
+                      <i class="ni "></i>
+                      <span>*100*0#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*1#" title="Copy to clipboard">
+                    <div>Data Bundles
+                      <i class="ni "></i>
+                      <span>*100*1#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*2#" title="Copy to clipboard">
+                    <div>MTN Wala
+                      <i class="ni "></i>
+                      <span>*100*2#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*3#" title="Copy to clipboard">
+                    <div>Voice Offers
+                      <i class="ni "></i>
+                      <span>*100*3#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*4#" title="Copy to clipboard">
+                    <div>Special Offers
+                      <i class="ni "></i>
+                      <span>*100*4#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*5#" title="Copy to clipboard">
+                    <div>MTN Business
+                      <i class="ni "></i>
+                      <span>*100*5#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*6#" title="Copy to clipboard">
+                    <div>Xtra Time
+                      <i class="ni "></i>
+                      <span>*100*6#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*7#" title="Copy to clipboard">
+                    <div>MTN Religious Portal
+                      <i class="ni "></i>
+                      <span>*100*7#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*8#" title="Copy to clipboard">
+                    <div>MTN School
+                      <i class="ni "></i>
+                      <span>*100*8#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*9#" title="Copy to clipboard">
+                    <div>MTN TV+
+                      <i class="ni "></i>
+                      <span>*100*9#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*10#" title="Copy to clipboard">
+                    <div>Registration Status
+                      <i class="ni "></i>
+                      <span>*100*10#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*11#" title="Copy to clipboard">
+                    <div>Me 2 U
+                      <i class="ni "></i>
+                      <span>*100*11#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*12#" title="Copy to clipboard">
+                    <div>Device Bundles
+                      <i class="ni "></i>
+                      <span>*100*12#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*13#" title="Copy to clipboard">
+                    <div>MTN F & F
+                      <i class="ni "></i>
+                      <span>*100*13#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*14#" title="Copy to clipboard">
+                    <div>MTN Giyafa
+                      <i class="ni "></i>
+                      <span>*100*14#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*15#" title="Copy to clipboard">
+                    <div>Usage History
+                      <i class="ni "></i>
+                      <span>*100*15#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*16#" title="Copy to clipboard">
+                    <div>My Number
+                      <i class="ni "></i>
+                      <span>*100*16#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*17#" title="Copy to clipboard">
+                    <div>Magic Voice
+                      <i class="ni "></i>
+                      <span>*100*17#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*18#" title="Copy to clipboard">
+                    <div>Sabi le Sabi
+                      <i class="ni "></i>
+                      <span>*100*18#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*19#" title="Copy to clipboard">
+                    <div>PUK Query
+                      <i class="ni "></i>
+                      <span>*100*19#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*20#" title="Copy to clipboard">
+                    <div>MTN Shukran
+                      <i class="ni "></i>
+                      <span>*100*20#</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*21#" title="Copy to clipboard">
+                    <div>Commission History
+                      <i class="ni "></i>
+                      <span>*100*21#</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*0*1#" title="Copy to clipboard">
+                    <div>MTN Hagi Voice
+                      <i class="ni "></i>
+                      <span>*100*0*1#</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*0*2#" title="Copy to clipboard">
+                    <div>MTN Hagi Data
+                      <i class="ni "></i>
+                      <span>*100*0*2#</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*0*1*1#" title="Copy to clipboard">
+                    <div>MTN Hagi Voice 88mins = 2K
+                      <i class="ni "></i>
+                      <span>*100*0*1*1#</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*0*2*1#" title="Copy to clipboard">
+                    <div>MTN Hagi Data Unlimited 1hr = 2.8K
+                      <i class="ni "></i>
+                      <span>*100*0*2*1#</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*1*0#" title="Copy to clipboard">
+                    <div>Unlimited Data
+                      <i class="ni "></i>
+                      <span>*100*1*0#</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*1*0*0#" title="Copy to clipboard">
+                    <div>Unlimited 1hr = 3.3K
+                      <i class="ni "></i>
+                      <span>*100*1*0*0#</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*1*1#" title="Copy to clipboard">
+                    <div>Zol Kebir + 50% Bonus
+                      <i class="ni "></i>
+                      <span>*100*1*1#</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*1*1*1#" title="Copy to clipboard">
+                    <div>Zol Kebir 1GB 5hrs = 4.9K
+                      <i class="ni "></i>
+                      <span>*100*1*1*1#</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*1*1*2#" title="Copy to clipboard">
+                    <div>Zol Kebir 3GB 5hrs = 13.7K
+                      <i class="ni "></i>
+                      <span>*100*1*1*2#</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*1*1*3#" title="Copy to clipboard">
+                    <div>Zol Kebir 5GB 7Days = 22.5K
+                      <i class="ni "></i>
+                      <span>*100*1*1*3#</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*1*1*4#" title="Copy to clipboard">
+                    <div>Zol Kebir 10GB 7Days = 49.1k
+                      <i class="ni "></i>
+                      <span>*100*1*1*4#</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*1*1*5#" title="Copy to clipboard">
+                    <div>Zol Kebir 15GB 7Days = 69.8K
+                      <i class="ni "></i>
+                      <span>*100*1*1*5#</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*1*2#" title="Copy to clipboard">
+                    <div>Daily Bundle
+                      <i class="ni "></i>
+                      <span>*100*1*2#</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*1*2*1#" title="Copy to clipboard">
+                    <div>Daily Bundle 25MB = 0.6K
+                      <i class="ni "></i>
+                      <span>*100*1*2*1#</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*1*2*2#" title="Copy to clipboard">
+                    <div>Dialy Bundle 50MB = 1.2K
+                      <i class="ni "></i>
+                      <span>*100*1*2*2#</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*1*2*3#" title="Copy to clipboard">
+                    <div>Daily Bundle 100MB = 2.4K
+                      <i class="ni "></i>
+                      <span>*100*1*2*3#</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*1*3#" title="Copy to clipboard">
+                    <div>Weekly Bundle
+                      <i class="ni "></i>
+                      <span>*100*1*3#</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*1*3*1#" title="Copy to clipboard">
+                    <div>Weekly Bundle 100MB = 4.3K
+                      <i class="ni "></i>
+                      <span>*100*1*3*1#</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*1*3*2#" title="Copy to clipboard">
+                    <div>Weekly Bundle 200MB = 6.8K
+                      <i class="ni "></i>
+                      <span>*100*1*3*2#</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*1*3*3#" title="Copy to clipboard">
+                    <div>Weekly Bundle 1GB = 20.8K
+                      <i class="ni "></i>
+                      <span>*100*1*3*3#</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*141#" title="Copy to clipboard">
+                    <div>Check Data Balance
+                      <i class="ni "></i>
+                      <span>*141#</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*4*1#" title="Copy to clipboard">
+                    <div>Ganiyan Bundle Mon - Thur
+                      <i class="ni "></i>
+                      <span>*100*4*1#</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*4*1*1#" title="Copy to clipboard">
+                    <div>Ganiyan Bundle 2.5GB = 11.4k
+                      <i class="ni "></i>
+                      <span>*100*4*1*1#</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*4*1*2#" title="Copy to clipboard">
+                    <div>Ganiyan Bundle 3.5GB = 13.2k
+                      <i class="ni "></i>
+                      <span>*100*4*1*2#</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*4*1*3#" title="Copy to clipboard">
+                    <div>Ganiyan Bundle 5.5GB = 21.2k
+                      <i class="ni "></i>
+                      <span>*100*4*1*3#</span>
+                    </div>
+                  </button>
+                </div>
+
+               
+             
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+              <h3 class="mb-0">ZAIN USSD Short-codes</h3><br>
+              Click to Copy the Short-code & paste it in Dial pad.
+            </div>
+            <div class="card-body">
+              <div class="row icon-examples">
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*102#" title="Copy to clipboard">
+                    <div>eeZee Net Menu
+                      <i class="ni "></i>
+                      <span>*102#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*102*1*1#" title="Copy to clipboard">
+                    <div>Daily Bundle 25MB = 0.59k
+                      <i class="ni "></i>
+                      <span>*102*1*1#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*102*1*2#" title="Copy to clipboard">
+                    <div>Daily Bundle 65MB = 1.5k
+                      <i class="ni "></i>
+                      <span>*102*1*2#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*102*1*3#" title="Copy to clipboard">
+                    <div>Daily Bundle 100MB = 2.1k
+                      <i class="ni "></i>
+                      <span>*102*1*3#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*102*1*4#" title="Copy to clipboard">
+                    <div>Daily Bundle 300MB = 5.5k
+                      <i class="ni "></i>
+                      <span>*102*1*4#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*102*5*1#" title="Copy to clipboard">
+                    <div>Mal'YAAN Bundle 500MB 5hrs = 2.4k
+                      <i class="ni "></i>
+                      <span>*102*5*1#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*102*5*2#" title="Copy to clipboard">
+                    <div>Mal'YAAN Bundle 1GB 5hrs = 4.4k
+                      <i class="ni "></i>
+                      <span>*102*5*2#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*102*5*3#" title="Copy to clipboard">
+                    <div>Mal'YAAN Bundle 3GB 7Days = 12.3k
+                      <i class="ni "></i>
+                      <span>*102*5*3#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*102*5*4#" title="Copy to clipboard">
+                    <div>Mal'YAAN Bundle 5GB 7days = 20.4k
+                      <i class="ni "></i>
+                      <span>*102*5*4#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*102*5*5#" title="Copy to clipboard">
+                    <div>Mal'YAAN Bundle 10GB 7days = 39.3k
+                      <i class="ni "></i>
+                      <span>*102*5*5#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*102*5*6#" title="Copy to clipboard">
+                    <div>Mal'YAAN Bundle 15GB 7days = 54k
+                      <i class="ni "></i>
+                      <span>*102*5*6#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*102*4*1#" title="Copy to clipboard">
+                    <div>Midnight 500MB = 1.4k
+                      <i class="ni "></i>
+                      <span>*102*4*1#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*102*4*2#" title="Copy to clipboard">
+                    <div>Midnight 1.5GB = 3.9k
+                      <i class="ni "></i>
+                      <span>*102*4*2#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*102*4*3#" title="Copy to clipboard">
+                    <div>Midnight 5GB = 12.8k
+                      <i class="ni "></i>
+                      <span>*102*4*3#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100#" title="Copy to clipboard">
+                    <div>eeZee TAlK Menu
+                      <i class="ni "></i>
+                      <span>*100#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*100*4#" title="Copy to clipboard">
+                    <div>20mins to All Networks = 0.9k
+                      <i class="ni "></i>
+                      <span>*100*4#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*102*6#" title="Copy to clipboard">
+                    <div>PAYGO Data
+                      <i class="ni "></i>
+                      <span>*102*6#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="bold" title="Copy to clipboard">
+                    <div>Free Sunday Data
+                      <i class="ni "></i>
+                      <span>*102*11#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*411#" title="Copy to clipboard">
+                    <div>Borrow Airtime
+                      <i class="ni "></i>
+                      <span>*411#</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*131#" title="Copy to clipboard">
+                    <div>Check Balance
+                      <i class="ni "></i>
+                      <span>*131#</span>
+                    </div>
+                  </button>
+                </div>
+              
+             
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+              <h3 class="mb-0">DIGITEL USSD Short-codes</h3><br>
+              Click to Copy the Short-code & paste it in Dial pad.
+            </div>
+            <div class="card-body">
+              <div class="row icon-examples">
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*200M" title="Copy to clipboard">
+                    <div>Main Menu
+                      <i class="ni "></i>
+                      <span>*200#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*200*1*1*1#" title="Copy to clipboard">
+                    <div>Voice Bundle Daily 4min = 0.19k
+                      <i class="ni "></i>
+                      <span>*200*1*1*1#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*200*1*1*2#" title="Copy to clipboard">
+                    <div>Voice Bundle Daily 10min = 0.38k
+                      <i class="ni "></i>
+                      <span>*200*1*1*2#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*200*1*1*3#" title="Copy to clipboard">
+                    <div>Voice Bundle Daily 15min = 0.5k
+                      <i class="ni "></i>
+                      <span>*200*1*1*3#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*200*1*1*4#" title="Copy to clipboard">
+                    <div>Voice Bundle Daily 30min = 0.95k
+                      <i class="ni "></i>
+                      <span>*200*1*1*4#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*200*2*1*1#" title="Copy to clipboard">
+                    <div>Data Bundles Daily 25MB = 0.4K
+                      <i class="ni "></i>
+                      <span>*200*2*1*1#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*200*2*1*2#" title="Copy to clipboard">
+                    <div>Data Bundles Daily 50MB = 0.8K
+                      <i class="ni "></i>
+                      <span>*200*2*1*2#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*200*2*1*3#" title="Copy to clipboard">
+                    <div>Data Bundle Daily 150MB = 2.3k
+                      <i class="ni "></i>
+                      <span>*200*2*1*3#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*200*2*3*1#" title="Copy to clipboard">
+                    <div>Weekend Data 1.5GB = 7.6k
+                      <i class="ni "></i>
+                      <span>*200*2*3*1#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*200*2*3*2#" title="Copy to clipboard">
+                    <div>Weekend Data 2GB = 9.9k
+                      <i class="ni "></i>
+                      <span>*200*2*3*2#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*200*2*3*3#" title="Copy to clipboard">
+                    <div>Weekend Data 3GB = 11.8K
+                      <i class="ni "></i>
+                      <span>*200*2*3*3#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*200*2*3*4#" title="Copy to clipboard">
+                    <div>Weekend Data 5GB = 18.7k
+                      <i class="ni "></i>
+                      <span>*200*2*3*4#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*200*2*6*1#" title="Copy to clipboard">
+                    <div>Rumba Bundle 1.5GB = 6.9K
+                      <i class="ni "></i>
+                      <span>*200*2*6*1#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*200*2*6*2#" title="Copy to clipboard">
+                    <div>Rumba Bundle 2.5GB = 11.1k
+                      <i class="ni "></i>
+                      <span>*200*2*6*2#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*200*2*6*3#" title="Copy to clipboard">
+                    <div>Rumba Bundle 3.5GB = 13k
+                      <i class="ni "></i>
+                      <span>*200*2*6*3#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*200*2*6*4#" title="Copy to clipboard">
+                    <div>Rumba Bundle 5.5GB = 20.8k
+                      <i class="ni "></i>
+                      <span>*200*2*6*4#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*200*2*7*1#" title="Copy to clipboard">
+                    <div>Unlimited 15Days = 250k
+                      <i class="ni "></i>
+                      <span>*200*2*7*1#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*200*2*7*2#" title="Copy to clipboard">
+                    <div>Unlimited 30Days = 500k
+                      <i class="ni "></i>
+                      <span>*200*2*7*2#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*200*2*2*1#" title="Copy to clipboard">
+                    <div>Midnight Bundle 500MB = 0.6k
+                      <i class="ni "></i>
+                      <span>*200*2*2*1#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*200*2*2*2#" title="Copy to clipboard">
+                    <div>Midnight Bundle 1GB = 1K
+                      <i class="ni "></i>
+                      <span>*200*2*2*2#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*200*2*2*3#" title="Copy to clipboard">
+                    <div>Midnight Bundle 1.5GB = 1.3K
+                      <i class="ni "></i>
+                      <span>*200*2*2*3#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*200*2*2*4#" title="Copy to clipboard">
+                    <div>Midnight Bundle 3GB = 2.6k
+                      <i class="ni "></i>
+                      <span>*200*2*2*4#</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="*131#" title="Copy to clipboard">
+                    <div>Check Balance
+                      <i class="ni "></i>
+                      <span>*131#</span>
+                    </div>
+                  </button>
+                </div>
+                
+             
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      {% include "includes/footer.html" %}
+
+    </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+<script src="/static/assets/vendor/clipboard/dist/clipboard.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var clipboard = new ClipboardJS('.btn-icon-clipboard');
+
+    document.getElementById('search-input').addEventListener('input', function() {
+      var query = this.value.toLowerCase();
+      var buttons = document.querySelectorAll('.btn-icon-clipboard');
+
+      buttons.forEach(function(button) {
+        var text = button.querySelector('div').innerText.toLowerCase();
+        if (text.includes(query)) {
+          button.parentElement.style.display = '';
+        } else {
+          button.parentElement.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+{% endblock javascripts %}
+
+
+
+

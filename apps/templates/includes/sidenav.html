@@ -12,23 +12,23 @@
         <!-- Nav items -->
         <ul class="navbar-nav">
 
-          <li class="nav-item">
-            <a class="nav-link {% if 'index' in segment %} active {% endif %}" href="/">
-              <i class="ni ni-collection text-orange"></i>
-              <span class="nav-link-text">USSD Short-codes</span>
-            </a>
-          </li>
 
           <li class="nav-item">
-            <a class="nav-link {% if 'payment' in segment %} active {% endif %}" href="/payment.html">
+            <a class="nav-link {% if 'index' in segment %} active {% endif %}" href="/index.html">
               <i class="ni ni-credit-card text-default"></i>
               <span class="nav-link-text">Payment & Travel</span>
             </a>
           </li>
 
- 
 
+          <li class="nav-item">
+            <a class="nav-link {% if 'shortcodes' in segment %} active {% endif %}" href="shortcodes.html">
+              <i class="ni ni-collection text-orange"></i>
+              <span class="nav-link-text">USSD Short-codes</span>
+            </a>
+          </li>
 
+      
           <li class="nav-item">
             <a class="nav-link {% if 'accomodation' in segment %} active {% endif %}" href="/accomodation.html">
               <i class="ni ni-building text-default"></i>
